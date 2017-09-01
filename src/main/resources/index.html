@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<title> VLC remote </title>
+<body>
+
+<h1> VLC remote </h1>
+
+<br/>
+
+<button onclick="pause()">pause</button>
+<button onclick="skip()">skip</button>
+<button onclick="rewind()">rewind</button>
+
+<p id="demo"></p>
+
+<script>
+
+function pause() {
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', 'pause');
+    xhr.send(null);
+}
+
+function skip() {
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', 'skip');
+    xhr.send(null);
+}
+
+function rewind() {
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', 'rewind');
+    xhr.send(null);
+}
+
+</script>
+
+</body>
+</html>

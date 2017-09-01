@@ -1,0 +1,29 @@
+plugins {
+    id "com.jfrog.bintray" version "1.7.3"
+}
+
+apply plugin: 'java'
+
+group 'com.codingblocks'
+name 'vlc-remote'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile group: 'org.nanohttpd', name: 'nanohttpd',  version: '2.2.0'
+    compile group: 'uk.co.caprica', name: 'vlcj',  version: '3.10.1'
+}
+
+bintray {
+    user = 'garg-anuj'
+    key = 'e94010e6925497b2a2ffdee542a315878760e41d'
+    pkg {
+        repo = 'generic'
+        name = 'gradle-project'
+        licenses = ['Apache-2.0']
+        vcsUrl = 'https://github.com/bintray/gradle-bintray-plugin.git'
+    }
+}
