@@ -5,7 +5,6 @@ plugins {
 apply plugin: 'java'
 
 group 'com.codingblocks'
-name 'vlc-remote'
 version '1.0-SNAPSHOT'
 
 repositories {
@@ -21,9 +20,9 @@ bintray {
     user = 'garg-anuj'
     key = 'e94010e6925497b2a2ffdee542a315878760e41d'
     pkg {
-        repo = 'generic'
-        name = 'gradle-project'
+        repo = 'sample-mango'
+        name = 'vlc-remote'
         licenses = ['Apache-2.0']
-        vcsUrl = 'https://github.com/bintray/gradle-bintray-plugin.git'
+        vcsUrl = 'https://github.com/garg-anuj/vlc-remote.git'
     }
 }
